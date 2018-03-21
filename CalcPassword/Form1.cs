@@ -32,10 +32,11 @@ namespace CalcPassword
             byte[] hash = md5.ComputeHash(feedToByte);
             for (int i = 0; i < hash.Length; i++)
             {
-                //pwd += hash[i].ToString("x2");
-                pwd += hash[i].ToString("X2");
+                //pwd += hash[i].ToString("x2");//小写
+                pwd += hash[i].ToString("X2");//大写
             }
-            tb_pwdFinal.Text = pwd;
+            //tb_pwdFinal.Text = pwd;//32位
+            tb_pwdFinal.Text = pwd.Substring(0, 16);//16位
         }
     }
 }
