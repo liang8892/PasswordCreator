@@ -38,5 +38,23 @@ namespace CalcPassword
             //tb_pwdFinal.Text = pwd;//32位
             tb_pwdFinal.Text = pwd.Substring(0, 16);//16位
         }
+        
+        private void btn_copy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tb_pwdFinal.Text);
+            if (Clipboard.GetText() == tb_pwdFinal.Text)
+            {
+                MessageBox.Show("成功复制到剪贴板。");
+            }
+        }
+
+        private void Text_Changed(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(tb_pwd1.Text)
+                && !string.IsNullOrWhiteSpace(tb_pwd2.Text))
+            {
+                btn_create_Click(null, null);
+            }
+        }
     }
 }

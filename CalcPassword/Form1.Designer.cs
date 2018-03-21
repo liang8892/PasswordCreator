@@ -36,73 +36,107 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tb_pwdFinal = new System.Windows.Forms.TextBox();
             this.btn_create = new System.Windows.Forms.Button();
+            this.btn_copy = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // tb_pwd1
             // 
-            this.tb_pwd1.Location = new System.Drawing.Point(108, 32);
+            this.tb_pwd1.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tb_pwd1.Location = new System.Drawing.Point(129, 193);
             this.tb_pwd1.Name = "tb_pwd1";
-            this.tb_pwd1.Size = new System.Drawing.Size(344, 21);
+            this.tb_pwd1.Size = new System.Drawing.Size(168, 33);
             this.tb_pwd1.TabIndex = 0;
+            this.tb_pwd1.TextChanged += new System.EventHandler(this.Text_Changed);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 36);
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(35, 196);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.Size = new System.Drawing.Size(88, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "记忆密码";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 92);
+            this.label2.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(303, 196);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.Size = new System.Drawing.Size(88, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "区分密码";
             // 
             // tb_pwd2
             // 
-            this.tb_pwd2.Location = new System.Drawing.Point(108, 88);
+            this.tb_pwd2.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tb_pwd2.Location = new System.Drawing.Point(397, 193);
             this.tb_pwd2.Name = "tb_pwd2";
-            this.tb_pwd2.Size = new System.Drawing.Size(344, 21);
+            this.tb_pwd2.Size = new System.Drawing.Size(168, 33);
             this.tb_pwd2.TabIndex = 2;
+            this.tb_pwd2.TextChanged += new System.EventHandler(this.Text_Changed);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 149);
+            this.label3.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(32, 269);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.Size = new System.Drawing.Size(91, 25);
             this.label3.TabIndex = 5;
-            this.label3.Text = "生成密码";
+            this.label3.Text = "16位密码";
             // 
             // tb_pwdFinal
             // 
-            this.tb_pwdFinal.Location = new System.Drawing.Point(108, 145);
+            this.tb_pwdFinal.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tb_pwdFinal.Location = new System.Drawing.Point(129, 266);
             this.tb_pwdFinal.Name = "tb_pwdFinal";
             this.tb_pwdFinal.ReadOnly = true;
-            this.tb_pwdFinal.Size = new System.Drawing.Size(344, 21);
+            this.tb_pwdFinal.Size = new System.Drawing.Size(262, 33);
             this.tb_pwdFinal.TabIndex = 4;
             // 
             // btn_create
             // 
-            this.btn_create.Location = new System.Drawing.Point(209, 201);
+            this.btn_create.Location = new System.Drawing.Point(149, 378);
             this.btn_create.Name = "btn_create";
-            this.btn_create.Size = new System.Drawing.Size(75, 30);
+            this.btn_create.Size = new System.Drawing.Size(94, 30);
             this.btn_create.TabIndex = 6;
-            this.btn_create.Text = "生成";
+            this.btn_create.Text = "生成密码";
             this.btn_create.UseVisualStyleBackColor = true;
+            this.btn_create.Visible = false;
             this.btn_create.Click += new System.EventHandler(this.btn_create_Click);
+            // 
+            // btn_copy
+            // 
+            this.btn_copy.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_copy.Location = new System.Drawing.Point(442, 266);
+            this.btn_copy.Name = "btn_copy";
+            this.btn_copy.Size = new System.Drawing.Size(123, 33);
+            this.btn_copy.TabIndex = 8;
+            this.btn_copy.Text = "复制密码";
+            this.btn_copy.UseVisualStyleBackColor = true;
+            this.btn_copy.Click += new System.EventHandler(this.btn_copy_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::CalcPassword.Properties.Resources.background;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(606, 127);
+            this.panel1.TabIndex = 9;
             // 
             // Form1
             // 
             this.AcceptButton = this.btn_create;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 255);
+            this.ClientSize = new System.Drawing.Size(606, 345);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btn_copy);
             this.Controls.Add(this.btn_create);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tb_pwdFinal);
@@ -114,6 +148,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "密码生成器";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -129,6 +164,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tb_pwdFinal;
         private System.Windows.Forms.Button btn_create;
+        private System.Windows.Forms.Button btn_copy;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
