@@ -15,6 +15,12 @@ namespace CalcPassword
         public PasswordManager()
         {
             InitializeComponent();
+
+        }
+
+        private void LoadData()
+        {
+            
         }
     }
 }

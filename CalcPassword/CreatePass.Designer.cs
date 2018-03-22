@@ -38,6 +38,8 @@
             this.btn_create = new System.Windows.Forms.Button();
             this.btn_copy = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tb_pwd1
@@ -123,14 +125,24 @@
             // 
             this.panel1.BackgroundImage = global::CalcPassword.Properties.Resources.background;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(606, 127);
             this.panel1.TabIndex = 9;
-            this.panel1.DoubleClick += new System.EventHandler(this.panel1_DoubleClick);
             // 
-            // Form1
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Location = new System.Drawing.Point(157, 61);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(25, 19);
+            this.panel2.TabIndex = 0;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            this.panel2.DoubleClick += new System.EventHandler(this.panel1_DoubleClick);
+            // 
+            // CreatePass
             // 
             this.AcceptButton = this.btn_create;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -148,9 +160,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "CreatePass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "密码生成器";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,6 +180,7 @@
         private System.Windows.Forms.Button btn_create;
         private System.Windows.Forms.Button btn_copy;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

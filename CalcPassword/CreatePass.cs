@@ -57,15 +57,28 @@ namespace CalcPassword
             }
         }
 
-        //
+        //密码管理
         private void panel1_DoubleClick(object sender, EventArgs e)
         {
             this.Visible = false;
             PasswordManager pm = new PasswordManager();
             pm.ShowDialog();
             this.Visible = true;
-            //var result = pm.ShowDialog();
-            //if(result==DialogResult.)
+        }
+
+        //保存密码
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            string pwd = tb_pwd1.Text;
+            if (string.IsNullOrWhiteSpace(pwd)) return;
+
+            string path = @"c:\password";
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
+
         }
     }
 }
