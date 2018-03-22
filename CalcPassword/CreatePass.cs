@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace CalcPassword
 {
-    public partial class Form1 : Form
+    public partial class CreatePass : Form
     {
-        public Form1()
+        public CreatePass()
         {
             InitializeComponent();
         }
@@ -55,6 +55,17 @@ namespace CalcPassword
             {
                 btn_create_Click(null, null);
             }
+        }
+
+        //
+        private void panel1_DoubleClick(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            PasswordManager pm = new PasswordManager();
+            pm.ShowDialog();
+            this.Visible = true;
+            //var result = pm.ShowDialog();
+            //if(result==DialogResult.)
         }
     }
 }

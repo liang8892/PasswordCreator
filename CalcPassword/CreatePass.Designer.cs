@@ -1,6 +1,6 @@
 ﻿namespace CalcPassword
 {
-    partial class Form1
+    partial class CreatePass
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreatePass));
             this.tb_pwd1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,7 +43,7 @@
             // tb_pwd1
             // 
             this.tb_pwd1.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_pwd1.Location = new System.Drawing.Point(129, 193);
+            this.tb_pwd1.Location = new System.Drawing.Point(129, 183);
             this.tb_pwd1.Name = "tb_pwd1";
             this.tb_pwd1.Size = new System.Drawing.Size(168, 33);
             this.tb_pwd1.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(35, 196);
+            this.label1.Location = new System.Drawing.Point(35, 186);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 25);
             this.label1.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(303, 196);
+            this.label2.Location = new System.Drawing.Point(303, 186);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 25);
             this.label2.TabIndex = 3;
@@ -72,7 +72,7 @@
             // tb_pwd2
             // 
             this.tb_pwd2.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_pwd2.Location = new System.Drawing.Point(397, 193);
+            this.tb_pwd2.Location = new System.Drawing.Point(397, 183);
             this.tb_pwd2.Name = "tb_pwd2";
             this.tb_pwd2.Size = new System.Drawing.Size(168, 33);
             this.tb_pwd2.TabIndex = 2;
@@ -128,6 +128,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(606, 127);
             this.panel1.TabIndex = 9;
+            this.panel1.DoubleClick += new System.EventHandler(this.panel1_DoubleClick);
             // 
             // Form1
             // 
