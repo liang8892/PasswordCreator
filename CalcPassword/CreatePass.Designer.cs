@@ -37,8 +37,11 @@
             this.tb_pwdFinal = new System.Windows.Forms.TextBox();
             this.btn_create = new System.Windows.Forms.Button();
             this.btn_copy = new System.Windows.Forms.Button();
+            this.label_save = new System.Windows.Forms.Label();
+            this.label_copy = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +50,7 @@
             this.tb_pwd1.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tb_pwd1.Location = new System.Drawing.Point(129, 183);
             this.tb_pwd1.Name = "tb_pwd1";
+            this.tb_pwd1.PasswordChar = '*';
             this.tb_pwd1.Size = new System.Drawing.Size(168, 33);
             this.tb_pwd1.TabIndex = 0;
             this.tb_pwd1.TextChanged += new System.EventHandler(this.Text_Changed);
@@ -98,6 +102,7 @@
             this.tb_pwdFinal.ReadOnly = true;
             this.tb_pwdFinal.Size = new System.Drawing.Size(262, 33);
             this.tb_pwdFinal.TabIndex = 4;
+            this.tb_pwdFinal.TextChanged += new System.EventHandler(this.tb_pwdFinal_TextChanged);
             // 
             // btn_create
             // 
@@ -121,10 +126,31 @@
             this.btn_copy.UseVisualStyleBackColor = true;
             this.btn_copy.Click += new System.EventHandler(this.btn_copy_Click);
             // 
+            // label_save
+            // 
+            this.label_save.AutoSize = true;
+            this.label_save.ForeColor = System.Drawing.Color.Red;
+            this.label_save.Location = new System.Drawing.Point(129, 319);
+            this.label_save.Name = "label_save";
+            this.label_save.Size = new System.Drawing.Size(0, 12);
+            this.label_save.TabIndex = 10;
+            // 
+            // label_copy
+            // 
+            this.label_copy.AutoSize = true;
+            this.label_copy.ForeColor = System.Drawing.Color.Red;
+            this.label_copy.Location = new System.Drawing.Point(440, 319);
+            this.label_copy.Name = "label_copy";
+            this.label_copy.Size = new System.Drawing.Size(53, 12);
+            this.label_copy.TabIndex = 11;
+            this.label_copy.Text = "复制成功";
+            this.label_copy.Visible = false;
+            // 
             // panel1
             // 
             this.panel1.BackgroundImage = global::CalcPassword.Properties.Resources.background;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -140,7 +166,15 @@
             this.panel2.Size = new System.Drawing.Size(25, 19);
             this.panel2.TabIndex = 0;
             this.panel2.Click += new System.EventHandler(this.panel2_Click);
-            this.panel2.DoubleClick += new System.EventHandler(this.panel1_DoubleClick);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Location = new System.Drawing.Point(454, 30);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(25, 19);
+            this.panel3.TabIndex = 1;
+            this.panel3.DoubleClick += new System.EventHandler(this.panel1_DoubleClick);
             // 
             // CreatePass
             // 
@@ -148,6 +182,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(606, 345);
+            this.Controls.Add(this.label_copy);
+            this.Controls.Add(this.label_save);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_copy);
             this.Controls.Add(this.btn_create);
@@ -181,6 +217,9 @@
         private System.Windows.Forms.Button btn_copy;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label_save;
+        private System.Windows.Forms.Label label_copy;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 
